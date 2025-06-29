@@ -1,5 +1,5 @@
 local window
-local CAMERA_POS_X, CAMERA_POS_Y, CAMERA_POS_Z = 1480, -1710, 100
+local CAMERA_POS_X, CAMERA_POS_Y, CAMERA_POS_Z = 1480, -1710, 20
 local CAMERA_LOOK_X, CAMERA_LOOK_Y, CAMERA_LOOK_Z = 1480, -1810, 20
 
 --Buttoms Scaling
@@ -37,7 +37,7 @@ end
 addEvent("login-menu:open", true)
 addEventHandler("login-menu:open", root, function()
     fadeCamera(true)
-    setCameraMatrix(1480, -1726, 13, 179, 5, -10)
+    setCameraMatrix(CAMERA_POS_X, CAMERA_POS_Y, CAMERA_POS_Z, CAMERA_LOOK_X, CAMERA_LOOK_Y, CAMERA_LOOK_Z)
     showCursor(true)
     guiSetInputMode("no_binds")
     setPlayerHudComponentVisible("all", false)
