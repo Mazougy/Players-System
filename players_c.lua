@@ -1,4 +1,6 @@
 local window
+local CAMERA_POS_X, CAMERA_POS_Y, CAMERA_POS_Z = 1480, -1710, 100
+local CAMERA_LOOK_X, CAMERA_LOOK_Y, CAMERA_LOOK_Z = 1480, -1810, 20
 
 --Buttoms Scaling
 

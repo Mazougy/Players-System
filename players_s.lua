@@ -17,7 +17,6 @@ addEventHandler("login-Proccess:character", root, function(username)
         local player = result[1]
         local rotation = math.floor(player.rotation)
         spawnPlayer(source, player.x, player.y, player.z, rotation, player.interior, player.dimension)
-        outputChatBox(name .. " has spawned!")
     else
         spawnPlayer(source, spawnX, SpawnY, spawnZ, spawnR)
         local dimension = getElementDimension(source)
@@ -27,9 +26,9 @@ addEventHandler("login-Proccess:character", root, function(username)
             name,
             spawnX, SpawnY, spawnZ, spawnR,
             interior, dimension)
-        outputChatBox(name .. " has spawned!")
     end
 
+    outputChatBox(name .. " has spawned!")
     fadeCamera(source, true)
     setCameraTarget(source)
 
