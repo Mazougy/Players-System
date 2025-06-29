@@ -79,7 +79,7 @@ addEventHandler("login-menu:open", root, function()
     --On click Login Button Event
 
     addEventHandler("onClientGUIClick", loginButtom, function(buttom, state)
-        if buttom ~= "left" or state ~= "down" then
+        if not( buttom == "left"  and state == "up") then
             return
         end
 
@@ -107,7 +107,7 @@ addEventHandler("login-menu:open", root, function()
     --On click Login Button Event
 
     addEventHandler("onClientGUIClick", signupButtom, function(buttom, state)
-        if not buttom == "left" and state == "down" then
+        if not( buttom == "left"  and state == "up") then
             return
         end
 
@@ -127,7 +127,7 @@ addEventHandler("login-menu:open", root, function()
 
         triggerServerEvent("login-account:creation", localPlayer, username, password)
     end, false)
-end, false)
+end)
 
 addEvent("login-menu:close", true)
 addEventHandler("login-menu:close", root, function(username)
